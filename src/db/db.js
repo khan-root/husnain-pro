@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 // mongodb+srv://sarmad:abc123efg@ecom.uud6wzw.mongodb.net/mine
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://sarmad:abc123efg@ecom.uud6wzw.mongodb.net/?retryWrites=true&w=majority&appName=Ecom';
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://sarmad:abc123efg@ecom.uud6wzw.mongodb.net';
 
 if (!MONGODB_URI) {
   throw new Error('Please define the MONGODB_URI environment variable');
@@ -17,12 +17,8 @@ const mongooseOptions = {
   connectTimeoutMS: 120000,
   retryWrites: true,
   retryReads: true,
-  w: 'majority',
-  bufferCommands: true,
-  autoIndex: true,
-  autoCreate: true
+  w: 'majority'
 };
-
 let cached = global.mongoose;
 
 if (!cached) {
