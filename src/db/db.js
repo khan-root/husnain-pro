@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://14appstudiopvt:sm0kFvewjeV22ZI7@cluster0.98baoec.mongodb.net/dgdorm?retryWrites=true&w=majority';
+
+// mongodb+srv://sarmad:abc123efg@ecom.uud6wzw.mongodb.net/mine
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://sarmad:abc123efg@ecom.uud6wzw.mongodb.net/?retryWrites=true&w=majority&appName=Ecom';
 
 if (!MONGODB_URI) {
   throw new Error('Please define the MONGODB_URI environment variable');
