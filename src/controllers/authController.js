@@ -72,7 +72,7 @@ const generateOTP = () => {
 // ...existing code...
 exports.register = async (req, res) => {
     try {
-        await connectDB();
+        // await connectDB();
         const { email, password, name, phone, location, devicePreferences } = req.body;
 
         // Check if user already exists
